@@ -3,6 +3,7 @@ require 'spec_helper'
 describe PagesController do
 	render_views 
 	
+	#/!\ Also defined in layout_links_spec.rb
 	before(:each) do
 		@base_title = "My project"
 	end
