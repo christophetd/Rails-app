@@ -1,9 +1,16 @@
 SampleApp::Application.routes.draw do
+  get "users/new"
+
   #Routing root
   root 				:to => 'pages#home'
+	
+  # Matching static pages
   match '/contact',	:to => 'pages#contact'
   match '/help',	:to => 'pages#help'
   match '/about',	:to => 'pages#about'
+  
+  # Matching User module
+  match '/register',	:to => 'users#new'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

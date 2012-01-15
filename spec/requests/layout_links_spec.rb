@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe "LayoutLink" do
 	
-	#/!\ Also defined in pages_controller_spec.rb
+	#/!\ Also defined in pages_controller_spec.rb and other spec
 	before(:each) do
 		@base_title = "My project"
 	end
@@ -25,5 +25,10 @@ describe "LayoutLink" do
 	it "should find an help page on '/help'" do
 		get '/help'
 		response.should have_selector('title', :content => @base_title+' | Help')
+	end
+	
+	it "should find register page on '/register'" do
+		get '/register'
+		response.should have_selector('title', :content => @base_title+' | Register')
 	end
 end
