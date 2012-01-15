@@ -1,8 +1,9 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>My project | <%= @title %></title>
+    <title><%= title %></title>
     <%= csrf_meta_tag %>
+    <%= stylesheet_link_tag 'blueprint/screen' %>
   </head>
   <body>
     <%= yield %>
